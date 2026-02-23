@@ -10,7 +10,7 @@ export default function Footer() {
                     {/* Brand */}
                     <div className="flex flex-col space-y-4">
                         <h3 className="text-2xl font-serif text-foreground">{siteData.companyName}</h3>
-                        <p className="text-foreground/70 leading-relaxed max-w-sm">
+                        <p className="text-foreground/90 leading-relaxed max-w-sm">
                             Premium bridal and editorial fashion makeup artist based in {siteData.contact.location}. Creating timeless, radiant looks for your special day.
                         </p>
                     </div>
@@ -19,11 +19,11 @@ export default function Footer() {
                     <div className="flex flex-col space-y-4">
                         <h4 className="text-sm uppercase tracking-widest font-semibold text-foreground">Quick Links</h4>
                         <nav className="flex flex-col space-y-2">
-                            <Link href="/" className="text-foreground/70 hover:text-gold-700 transition-colors">Home</Link>
-                            <Link href="/about" className="text-foreground/70 hover:text-gold-700 transition-colors">About</Link>
-                            <Link href="/services" className="text-foreground/70 hover:text-gold-700 transition-colors">Services</Link>
-                            <Link href="/portfolio" className="text-foreground/70 hover:text-gold-700 transition-colors">Portfolio</Link>
-                            <Link href="/contact" className="text-foreground/70 hover:text-gold-700 transition-colors">Contact</Link>
+                            <Link href="/" className="text-foreground/90 hover:text-gold-700 transition-colors">Home</Link>
+                            <Link href="/about" className="text-foreground/90 hover:text-gold-700 transition-colors">About</Link>
+                            <Link href="/services" className="text-foreground/90 hover:text-gold-700 transition-colors">Services</Link>
+                            <Link href="/portfolio" className="text-foreground/90 hover:text-gold-700 transition-colors">Portfolio</Link>
+                            <Link href="/contact" className="text-foreground/90 hover:text-gold-700 transition-colors">Contact</Link>
                         </nav>
                     </div>
 
@@ -31,15 +31,15 @@ export default function Footer() {
                     <div className="flex flex-col space-y-4">
                         <h4 className="text-sm uppercase tracking-widest font-semibold text-foreground">Get in Touch</h4>
                         <div className="flex flex-col space-y-3">
-                            <a href={`mailto:${siteData.contact.email}`} className="flex items-center space-x-3 text-foreground/70 hover:text-gold-700 transition-colors">
+                            <a href={`mailto:${siteData.contact.email}`} className="flex items-center space-x-3 text-foreground/90 hover:text-gold-700 transition-colors">
                                 <Mail size={18} />
                                 <span>{siteData.contact.email}</span>
                             </a>
-                            <a href={`tel:${siteData.contact.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center space-x-3 text-foreground/70 hover:text-gold-700 transition-colors">
+                            <a href={`tel:${siteData.contact.phone.replace(/[^0-9+]/g, '')}`} className="flex items-center space-x-3 text-foreground/90 hover:text-gold-700 transition-colors">
                                 <Phone size={18} />
                                 <span>{siteData.contact.phone}</span>
                             </a>
-                            <div className="flex items-start space-x-3 text-foreground/70">
+                            <div className="flex items-start space-x-3 text-foreground/90">
                                 <MapPin size={18} className="mt-1 flex-shrink-0" />
                                 <span>{siteData.contact.location}</span>
                             </div>
@@ -59,7 +59,7 @@ export default function Footer() {
                     </div>
                 </div>
 
-                <div className="border-t border-blush-200 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-foreground/60">
+                <div className="border-t border-blush-200 pt-8 flex flex-col md:flex-row items-center justify-between text-sm text-foreground/80">
                     <p>&copy; {new Date().getFullYear()} {siteData.companyName}. All rights reserved.</p>
                     <div className="flex space-x-4 mt-4 md:mt-0">
                         <Link href="/privacy" className="hover:text-gold-700 transition-colors">Privacy Policy</Link>

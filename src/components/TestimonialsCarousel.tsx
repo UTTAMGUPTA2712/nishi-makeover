@@ -82,7 +82,7 @@ export default function TestimonialsCarousel() {
                                 </div>
                                 <div>
                                     <h4 className="font-medium text-foreground tracking-wide">{testimonial.name}</h4>
-                                    <p className="text-sm text-foreground/60 uppercase tracking-widest text-[10px] mt-1">{testimonial.role}</p>
+                                    <p className="text-sm text-foreground/80 uppercase tracking-widest text-[10px] mt-1">{testimonial.role}</p>
                                 </div>
                             </div>
                         </div>

@@ -17,7 +17,7 @@ export default function Hero() {
                     sizes="100vw"
                 />
                 {/* Elegant overlay to make text readable */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-black/30 w-full md:w-[70%] z-10" />
             </div>
 
             {/* Content */}
@@ -25,18 +25,18 @@ export default function Hero() {
                 <span className="text-gold-300 font-medium tracking-[0.2em] uppercase text-sm mb-4 inline-block">
                     {siteData.hero.tagline}
                 </span>
-                <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight mb-6 max-w-3xl drop-shadow-md">
+                <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight mb-6 max-w-3xl drop-shadow-xl text-white">
                     {siteData.hero.headingLine1} <br className="hidden md:block" />
-                    <span className="text-gold-200 indent-2 italic">{siteData.hero.headingLine2}</span> {siteData.hero.headingLine3}
+                    <span className="text-gold-400 indent-2 italic">{siteData.hero.headingLine2}</span> {siteData.hero.headingLine3}
                 </h1>
-                <p className="text-lg md:text-xl text-white/90 mb-10 max-w-xl font-light drop-shadow">
+                <p className="text-lg md:text-xl text-white mb-10 max-w-xl font-light drop-shadow-lg">
                     {siteData.hero.description}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                     <Link
                         href="/contact"
-                        className="group flex items-center justify-center bg-gold-600 hover:bg-gold-500 text-white px-8 py-4 uppercase tracking-widest text-sm transition-all duration-300 shadow-lg"
+                        className="group flex items-center justify-center bg-gold-600 hover:bg-gold-500 text-white px-8 py-4 uppercase tracking-widest text-sm transition-all duration-300 shadow-xl"
                     >
                         Book Now
                         <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -43,7 +43,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="text-2xl font-semibold tracking-wide text-foreground hover:opacity-80 transition-opacity font-serif"
+                    className={`text-2xl font-semibold tracking-wide hover:opacity-80 transition-opacity font-serif ${scrolled || pathname !== "/" ? "text-foreground" : "text-white"}`}
                 >
                     {siteData.companyName}
                 </Link>
@@ -55,8 +55,8 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             className={`text-sm uppercase tracking-widest transition-colors ${pathname === link.href
-                                ? "text-gold-700 font-medium"
-                                : "text-foreground/80 hover:text-gold-600"
+                                ? "text-gold-500 font-medium"
+                                : scrolled || pathname !== "/" ? "text-foreground/80 hover:text-gold-600" : "text-white/80 hover:text-white"
                                 }`}
                         >
                             {link.name}
@@ -66,7 +66,7 @@ export default function Navbar() {
                         href={siteData.contact.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-foreground/80 hover:text-gold-600 transition-colors"
+                        className={`transition-colors ${scrolled || pathname !== "/" ? "text-foreground/80 hover:text-gold-600" : "text-white/80 hover:text-white"}`}
                     >
                         <Instagram size={20} />
                         <span className="sr-only">Instagram</span>
@@ -75,7 +75,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className="md:hidden text-foreground hover:text-gold-600 transition-colors p-2"
+                    className={`md:hidden transition-colors p-2 ${scrolled || pathname !== "/" ? "text-foreground hover:text-gold-600" : "text-white hover:text-gold-300"}`}
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
                 >

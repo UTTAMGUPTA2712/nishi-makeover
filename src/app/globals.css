@@ -3,18 +3,19 @@
 @theme {
   --font-playfair: var(--font-playfair);
   --font-inter: var(--font-inter);
-  
+
   --color-gold-50: #fffbeb;
   --color-gold-100: #fef3c7;
   --color-gold-200: #fde68a;
   --color-gold-300: #fcd34d;
-  --color-gold-400: #fbbf24;
-  --color-gold-500: #f59e0b;
-  --color-gold-600: #d97706;  /* Vibrant marigold */
-  --color-gold-700: #b45309;
-  --color-gold-800: #92400e;
-  --color-gold-900: #78350f;
-  --color-gold-950: #451a03;
+  --color-gold-400: #d97706;
+  --color-gold-500: #b45309;
+  --color-gold-600: #92400e;
+  /* Richer marigold for text */
+  --color-gold-700: #78350f;
+  --color-gold-800: #662E0C;
+  --color-gold-900: #54260A;
+  --color-gold-950: #421E08;
 
   --color-blush-50: #fdf2f8;
   --color-blush-100: #fce7f3;
@@ -22,25 +23,30 @@
   --color-blush-300: #f9a8d4;
   --color-blush-400: #f472b6;
   --color-blush-500: #ec4899;
-  --color-blush-600: #db2777;  /* Rani pink */
+  --color-blush-600: #db2777;
+  /* Rani pink */
   --color-blush-700: #be185d;
   --color-blush-800: #9d174d;
   --color-blush-900: #831843;
   --color-blush-950: #500724;
-  
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 }
 
 :root {
-  --background: #faf8f5;      /* Warm off-white */
-  --foreground: #2a0a18;      /* Deep wine/maroon */
+  --background: #faf8f5;
+  /* Warm off-white */
+  --foreground: #2a0a18;
+  /* Deep wine/maroon */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1a0104;    /* Very dark burgundy */
-    --foreground: #fdf2f8;    /* Light pinkish white */
+    --background: #1a0104;
+    /* Very dark burgundy */
+    --foreground: #fdf2f8;
+    /* Light pinkish white */
   }
 }
 
@@ -50,7 +56,12 @@ body {
   font-family: var(--font-inter), sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-playfair), serif;
 }
 
@@ -58,15 +69,20 @@ h1, h2, h3, h4, h5, h6 {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: #fcd34d; /* gold-300 - brighter against warm bg */
+  background-color: #fcd34d;
+  /* gold-300 - brighter against warm bg */
   border-radius: 4px;
 }
+
 .dark ::-webkit-scrollbar-thumb {
-  background-color: #78350f; /* gold-900 */
+  background-color: #78350f;
+  /* gold-900 */
 }
 
 /* Utilities */

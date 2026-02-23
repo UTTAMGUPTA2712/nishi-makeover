@@ -45,7 +45,7 @@ export default function ContactForm() {
 
                         <div className="bg-blush-50 p-8 border border-blush-100 rounded-sm">
                             <h3 className="text-lg font-serif font-medium mb-4">Direct Inquiry</h3>
-                            <p className="text-sm text-foreground/70 mb-6 leading-relaxed">
+                            <p className="text-sm text-foreground/80 mb-6 leading-relaxed">
                                 For urgent inquiries or specific questions, feel free to reach out directly via WhatsApp.
                             </p>
                             <a
@@ -65,7 +65,7 @@ export default function ContactForm() {
                         <form onSubmit={handleSubmit} className="bg-zinc-50 p-8 md:p-12 shadow-sm border border-black/5">
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                                 <div className="flex flex-col gap-2">
-                                    <label htmlFor="name" className="text-xs uppercase tracking-widest text-foreground/60 font-medium">Full Name *</label>
+                                    <label htmlFor="name" className="text-xs uppercase tracking-widest text-foreground/80 font-medium">Full Name *</label>
                                     <input
                                         type="text"
                                         id="name"
@@ -73,12 +73,12 @@ export default function ContactForm() {
                                         required
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-gold-600 py-3 outline-none transition-colors rounded-none placeholder:text-foreground/30 font-light"
+                                        className="bg-transparent border-b border-black/40 focus:border-gold-600 py-3 outline-none transition-colors rounded-none placeholder:text-foreground/50 font-light"
                                         placeholder="Priya Sharma"
                                     />
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    <label htmlFor="email" className="text-xs uppercase tracking-widest text-foreground/60 font-medium">Email Address *</label>
+                                    <label htmlFor="email" className="text-xs uppercase tracking-widest text-foreground/80 font-medium">Email Address *</label>
                                     <input
                                         type="email"
                                         id="email"
@@ -86,7 +86,7 @@ export default function ContactForm() {
                                         required
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-gold-600 py-3 outline-none transition-colors rounded-none placeholder:text-foreground/30 font-light"
+                                        className="bg-transparent border-b border-black/40 focus:border-gold-600 py-3 outline-none transition-colors rounded-none placeholder:text-foreground/50 font-light"
                                         placeholder="priya@example.com"
                                     />
                                 </div>
@@ -94,7 +94,7 @@ export default function ContactForm() {
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                                 <div className="flex flex-col gap-2">
-                                    <label htmlFor="phone" className="text-xs uppercase tracking-widest text-foreground/60 font-medium">Phone Number *</label>
+                                    <label htmlFor="phone" className="text-xs uppercase tracking-widest text-foreground/80 font-medium">Phone Number *</label>
                                     <input
                                         type="tel"
                                         id="phone"
@@ -102,31 +102,31 @@ export default function ContactForm() {
                                         required
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-gold-600 py-3 outline-none transition-colors rounded-none placeholder:text-foreground/30 font-light"
+                                        className="bg-transparent border-b border-black/40 focus:border-gold-600 py-3 outline-none transition-colors rounded-none placeholder:text-foreground/50 font-light"
                                         placeholder="+91 98765 43210"
                                     />
                                 </div>
                                 <div className="flex flex-col gap-2">
-                                    <label htmlFor="date" className="text-xs uppercase tracking-widest text-foreground/60 font-medium">Event Date</label>
+                                    <label htmlFor="date" className="text-xs uppercase tracking-widest text-foreground/80 font-medium">Event Date</label>
                                     <input
                                         type="date"
                                         id="date"
                                         name="date"
                                         value={formData.date}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-gold-600 py-3 outline-none transition-colors rounded-none font-light text-foreground"
+                                        className="bg-transparent border-b border-black/40 focus:border-gold-600 py-3 outline-none transition-colors rounded-none font-light text-foreground"
                                     />
                                 </div>
                             </div>
 
                             <div className="flex flex-col gap-2 mb-8">
-                                <label htmlFor="service" className="text-xs uppercase tracking-widest text-foreground/60 font-medium">Primary Service Required</label>
+                                <label htmlFor="service" className="text-xs uppercase tracking-widest text-foreground/80 font-medium">Primary Service Required</label>
                                 <select
                                     id="service"
                                     name="service"
                                     value={formData.service}
                                     onChange={handleChange}
-                                    className="bg-transparent border-b border-black/20 focus:border-gold-600 py-3 outline-none transition-colors rounded-none font-light appearance-none text-foreground"
+                                    className="bg-transparent border-b border-black/40 focus:border-gold-600 py-3 outline-none transition-colors rounded-none font-light appearance-none text-foreground"
                                 >
                                     <option value="Bridal Full Package">Bridal Full Package (Airbrush/HD)</option>
                                     <option value="Pre-Wedding/Engagement">Pre-Wedding / Engagement</option>
@@ -137,7 +137,7 @@ export default function ContactForm() {
                             </div>
 
                             <div className="flex flex-col gap-2 mb-10">
-                                <label htmlFor="message" className="text-xs uppercase tracking-widest text-foreground/60 font-medium">Tell us about your look / event details *</label>
+                                <label htmlFor="message" className="text-xs uppercase tracking-widest text-foreground/80 font-medium">Tell us about your look / event details *</label>
                                 <textarea
                                     id="message"
                                     name="message"
@@ -145,7 +145,7 @@ export default function ContactForm() {
                                     rows={4}
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="bg-transparent border-b border-black/20 focus:border-gold-600 py-3 outline-none transition-colors rounded-none placeholder:text-foreground/30 font-light resize-none"
+                                    className="bg-transparent border-b border-black/40 focus:border-gold-600 py-3 outline-none transition-colors rounded-none placeholder:text-foreground/50 font-light resize-none"
                                     placeholder="I'm looking for a very natural, glowing daytime look for my destination wedding..."
                                 ></textarea>
                             </div>
