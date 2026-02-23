@@ -5,7 +5,7 @@ export const siteData = {
         email: "hello@nishimakeover.com",
         phone: "+91 9773706266",
         location: "Delhi NCR, India (Available for Destination Weddings)",
-        instagram: "https://instagram.com/nishimakeover",
+        instagram: "https://instagram.com/nishimakeover_up",
         facebook: "https://facebook.com/nishimakeover",
         youtube: "https://youtube.com/@Nishiguptamakeover"
     },
