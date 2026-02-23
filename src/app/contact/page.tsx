@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 import { Mail, Phone, MapPin, Instagram } from "lucide-react";
+import { siteData } from "@/config/siteData";
 
 export const metadata: Metadata = {
-    title: "Contact | Uttam Makeup",
-    description: "Book Uttam for your bridal or editorial makeup needs. Get in touch for availability, pricing, and specific inquiries.",
+    title: `Contact | ${siteData.companyName}`,
+    description: `Book ${siteData.artistName} for your bridal or editorial makeup needs. Get in touch for availability, pricing, and specific inquiries.`,
 };
 
 export default function ContactPage() {
@@ -33,7 +34,7 @@ export default function ContactPage() {
                             <Mail size={20} />
                         </div>
                         <h3 className="font-serif text-xl mb-2">Email</h3>
-                        <a href="mailto:hello@uttam.com" className="text-foreground/70 font-light hover:text-gold-600">hello@uttam.com</a>
+                        <a href={`mailto:${siteData.contact.email}`} className="text-foreground/70 font-light hover:text-gold-600">{siteData.contact.email}</a>
                     </div>
 
                     <div className="bg-white p-8 shadow-sm border border-black/5 text-center flex flex-col items-center">
@@ -41,7 +42,7 @@ export default function ContactPage() {
                             <Phone size={20} />
                         </div>
                         <h3 className="font-serif text-xl mb-2">Phone / WhatsApp</h3>
-                        <a href="tel:+919876543210" className="text-foreground/70 font-light hover:text-gold-600">+91 98765 43210</a>
+                        <a href={`tel:${siteData.contact.phone.replace(/[^0-9+]/g, '')}`} className="text-foreground/70 font-light hover:text-gold-600">{siteData.contact.phone}</a>
                     </div>
 
                     <div className="bg-white p-8 shadow-sm border border-black/5 text-center flex flex-col items-center">
@@ -49,7 +50,7 @@ export default function ContactPage() {
                             <MapPin size={20} />
                         </div>
                         <h3 className="font-serif text-xl mb-2">Location</h3>
-                        <p className="text-foreground/70 font-light">Delhi NCR, India<br /><span className="text-sm">(Available Worldwide)</span></p>
+                        <p className="text-foreground/70 font-light">{siteData.contact.location}<br /><span className="text-sm">(Available Worldwide)</span></p>
                     </div>
                 </div>
             </div>

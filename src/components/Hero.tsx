@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { siteData } from "@/config/siteData";
 
 export default function Hero() {
     return (
@@ -8,8 +9,8 @@ export default function Hero() {
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <Image
-                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop"
-                    alt="Premium Bridal Makeup"
+                    src={siteData.hero.image}
+                    alt={`${siteData.companyName} Hero`}
                     fill
                     priority
                     className="object-cover object-[center_30%]"
@@ -22,14 +23,14 @@ export default function Hero() {
             {/* Content */}
             <div className="container relative z-20 mx-auto px-6 md:px-12 text-center md:text-left flex flex-col items-center md:items-start text-white">
                 <span className="text-gold-300 font-medium tracking-[0.2em] uppercase text-sm mb-4 inline-block">
-                    Delhi NCR & Destination
+                    {siteData.hero.tagline}
                 </span>
                 <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight mb-6 max-w-3xl drop-shadow-md">
-                    Timeless Bridal Glows & <br className="hidden md:block" />
-                    <span className="text-gold-200 indent-2 italic">Editorial</span> Looks
+                    {siteData.hero.headingLine1} <br className="hidden md:block" />
+                    <span className="text-gold-200 indent-2 italic">{siteData.hero.headingLine2}</span> {siteData.hero.headingLine3}
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-10 max-w-xl font-light drop-shadow">
-                    Creating flawless, radiant, and elegant makeup experiences tailored for your most special day.
+                    {siteData.hero.description}
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">

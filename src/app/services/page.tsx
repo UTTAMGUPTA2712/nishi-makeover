@@ -2,10 +2,11 @@ import { Metadata } from "next";
 import ServicesGrid from "@/components/ServicesGrid";
 import Link from "next/link";
 import { Check } from "lucide-react";
+import { siteData } from "@/config/siteData";
 
 export const metadata: Metadata = {
-    title: "Services & Pricing | Uttam Makeup",
-    description: "Detailed breakdown of bridal makeup packages, pre-wedding styling, editorial rates, and 1-on-1 makeup lessons in Delhi NCR.",
+    title: `Services & Pricing | ${siteData.companyName}`,
+    description: `Detailed breakdown of bridal makeup packages, pre-wedding styling, editorial rates, and 1-on-1 makeup lessons by ${siteData.artistName}.`,
 };
 
 const detailedServices = [

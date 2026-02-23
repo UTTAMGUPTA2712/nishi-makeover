@@ -3,33 +3,9 @@
 import { useRef } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { siteData } from "@/config/siteData";
 
-const testimonials = [
-    {
-        name: "Priya Sharma",
-        role: "Bride",
-        image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1000&auto=format&fit=crop",
-        quote: "Uttam is a magician! She translated exactly what I wanted into reality. My bridal makeup was extremely natural, glowing, and stayed flawless throughout the entire night. I felt like the best version of myself.",
-    },
-    {
-        name: "Ananya Mehta",
-        role: "Fashion Model",
-        image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop",
-        quote: "Working with Uttam on set is always a dream. Her editorial eye is unmatched and she understands lighting perfectly. The makeup never looks heavy, yet photographs beautifully.",
-    },
-    {
-        name: "Riya Kapoor",
-        role: "Bride",
-        image: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1000&auto=format&fit=crop",
-        quote: "I was super nervous about my destination wedding in Rajasthan, but Uttam's airbrush technique saved the day. The makeup didn't budge despite the heat, and the glow was breathtaking.",
-    },
-    {
-        name: "Aisha Singh",
-        role: "Engagement",
-        image: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1000&auto=format&fit=crop",
-        quote: "So professional and attentive. She listened to all my concerns about my skin type and the final look was just stellar! Highly recommend her for any special occasion.",
-    }
-];
+const testimonials = siteData.testimonials;
 
 export default function TestimonialsCarousel() {
     const scrollContainerRef = useRef<HTMLDivElement>(null);

@@ -2,10 +2,11 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Award } from "lucide-react";
+import { siteData } from "@/config/siteData";
 
 export const metadata: Metadata = {
-    title: "About Uttam | Premium Makeup Artist",
-    description: "Learn more about Uttam, a professional makeup artist with 10+ years of experience in bridal, fashion, and editorial styling.",
+    title: `About ${siteData.artistName} | Premium Makeup Artist`,
+    description: `Learn more about ${siteData.artistName}, a professional makeup artist with 10+ years of experience in bridal, fashion, and editorial styling.`,
 };
 
 export default function AboutPage() {
@@ -17,8 +18,8 @@ export default function AboutPage() {
                 <div className="w-full lg:w-5/12 relative">
                     <div className="relative aspect-[3/4] w-full">
                         <Image
-                            src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1964&auto=format&fit=crop"
-                            alt="Uttam Artist Portrait"
+                            src={siteData.about.image}
+                            alt={`${siteData.artistName} Artist Portrait`}
                             fill
                             className="object-cover rounded-sm"
                             priority
@@ -42,7 +43,7 @@ export default function AboutPage() {
                         The Artist
                     </span>
                     <h1 className="text-5xl md:text-6xl font-serif font-medium text-foreground mb-8">
-                        Meet Uttam
+                        {siteData.about.heading}
                     </h1>
 
                     <div className="space-y-6 text-foreground/80 font-light leading-relaxed text-lg mb-12">
@@ -82,7 +83,7 @@ export default function AboutPage() {
                             View My Work
                         </Link>
                         <a
-                            href="https://instagram.com"
+                            href={siteData.contact.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="flex items-center justify-center border border-black/20 hover:border-gold-600 text-foreground hover:text-gold-700 px-6 py-4 uppercase tracking-widest text-sm transition-all duration-300"

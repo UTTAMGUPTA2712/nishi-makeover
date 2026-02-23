@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, Instagram } from "lucide-react";
+import { siteData } from "@/config/siteData";
 
 const navLinks = [
     { name: "Home", href: "/" },
@@ -34,8 +35,8 @@ export default function Navbar() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                    ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
-                    : "bg-transparent py-6"
+                ? "bg-white/90 backdrop-blur-md shadow-sm py-4"
+                : "bg-transparent py-6"
                 }`}
         >
             <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
@@ -44,7 +45,7 @@ export default function Navbar() {
                     href="/"
                     className="text-2xl font-semibold tracking-wide text-foreground hover:opacity-80 transition-opacity font-serif"
                 >
-                    Uttam Makeup
+                    {siteData.companyName}
                 </Link>
 
                 {/* Desktop Navigation */}
@@ -54,15 +55,15 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             className={`text-sm uppercase tracking-widest transition-colors ${pathname === link.href
-                                    ? "text-gold-700 font-medium"
-                                    : "text-foreground/80 hover:text-gold-600"
+                                ? "text-gold-700 font-medium"
+                                : "text-foreground/80 hover:text-gold-600"
                                 }`}
                         >
                             {link.name}
                         </Link>
                     ))}
                     <a
-                        href="https://instagram.com"
+                        href={siteData.contact.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-foreground/80 hover:text-gold-600 transition-colors"
@@ -90,8 +91,8 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             className={`text-base uppercase tracking-widest py-2 border-b border-gold-50 transition-colors ${pathname === link.href
-                                    ? "text-gold-700 font-medium"
-                                    : "text-foreground/80 hover:text-gold-600"
+                                ? "text-gold-700 font-medium"
+                                : "text-foreground/80 hover:text-gold-600"
                                 }`}
                         >
                             {link.name}
@@ -99,7 +100,7 @@ export default function Navbar() {
                     ))}
                     <div className="pt-2">
                         <a
-                            href="https://instagram.com"
+                            href={siteData.contact.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="inline-flex items-center space-x-2 text-foreground/80 hover:text-gold-600 transition-colors"

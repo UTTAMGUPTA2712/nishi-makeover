@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { siteData } from "@/config/siteData";
 
 export default function AboutSection() {
     return (
@@ -9,8 +10,8 @@ export default function AboutSection() {
                 <div className="w-full md:w-1/2 relative">
                     <div className="relative aspect-[3/4] w-full max-w-md mx-auto">
                         <Image
-                            src="https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1964&auto=format&fit=crop"
-                            alt="Uttam applying premium makeup"
+                            src={siteData.about.image}
+                            alt={`${siteData.artistName} applying premium makeup`}
                             fill
                             className="object-cover rounded-sm shadow-xl"
                             sizes="(max-width: 768px) 100vw, 50vw"
@@ -24,16 +25,16 @@ export default function AboutSection() {
                 {/* Text Side */}
                 <div className="w-full md:w-1/2 flex flex-col items-start text-left">
                     <span className="text-gold-600 font-medium tracking-[0.2em] uppercase text-sm mb-4">
-                        Meet the Artist
+                        {siteData.about.tagline}
                     </span>
                     <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground mb-6">
-                        Hi, I'm Uttam
+                        {siteData.about.heading}
                     </h2>
                     <p className="text-foreground/80 leading-relaxed mb-6 font-light">
-                        With over a decade of experience in the beauty industry, I specialize in creating timeless, radiant looks for brides and high-fashion editorials. My philosophy is simple: makeup should enhance your natural beauty, not mask it.
+                        {siteData.about.paragraph1}
                     </p>
                     <p className="text-foreground/80 leading-relaxed mb-10 font-light">
-                        Whether you're walking down the aisle in a grand palace or posing for a fashion spread, my goal is to make you feel confident, beautiful, and absolutely flawless.
+                        {siteData.about.paragraph2}
                     </p>
 
                     <Link

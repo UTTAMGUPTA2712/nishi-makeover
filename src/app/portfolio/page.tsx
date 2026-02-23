@@ -1,10 +1,11 @@
 import { Metadata } from "next";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import BeforeAfterGallery from "@/components/BeforeAfterGallery";
+import { siteData } from "@/config/siteData";
 
 export const metadata: Metadata = {
-    title: "Portfolio | Uttam Makeup",
-    description: "Browse the bridal and editorial makeup portfolio of Uttam highlighting natural, glowing, and airbrush looks.",
+    title: `Portfolio | ${siteData.companyName}`,
+    description: `Browse the bridal and editorial makeup portfolio of ${siteData.artistName} highlighting natural, glowing, and airbrush looks.`,
 };
 
 export default function PortfolioPage() {

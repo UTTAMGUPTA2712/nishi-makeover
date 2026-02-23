@@ -4,43 +4,43 @@
   --font-playfair: var(--font-playfair);
   --font-inter: var(--font-inter);
   
-  --color-gold-50: #fbf9f4;
-  --color-gold-100: #f5eedf;
-  --color-gold-200: #ead9bc;
-  --color-gold-300: #dec193;
-  --color-gold-400: #d3a76a;
-  --color-gold-500: #c99047;
-  --color-gold-600: #bc7739;
-  --color-gold-700: #9d5a2f;
-  --color-gold-800: #81482a;
-  --color-gold-900: #693c25;
-  --color-gold-950: #3c1e10;
+  --color-gold-50: #fffbeb;
+  --color-gold-100: #fef3c7;
+  --color-gold-200: #fde68a;
+  --color-gold-300: #fcd34d;
+  --color-gold-400: #fbbf24;
+  --color-gold-500: #f59e0b;
+  --color-gold-600: #d97706;  /* Vibrant marigold */
+  --color-gold-700: #b45309;
+  --color-gold-800: #92400e;
+  --color-gold-900: #78350f;
+  --color-gold-950: #451a03;
 
-  --color-blush-50: #fdf8f8;
-  --color-blush-100: #fbf0f0;
-  --color-blush-200: #f6dfe0;
-  --color-blush-300: #efc4c6;
-  --color-blush-400: #e49ea2;
-  --color-blush-500: #d57379;
-  --color-blush-600: #bc5259;
-  --color-blush-700: #9d4248;
-  --color-blush-800: #83393f;
-  --color-blush-900: #6d3338;
-  --color-blush-950: #3b181b;
+  --color-blush-50: #fdf2f8;
+  --color-blush-100: #fce7f3;
+  --color-blush-200: #fbcfe8;
+  --color-blush-300: #f9a8d4;
+  --color-blush-400: #f472b6;
+  --color-blush-500: #ec4899;
+  --color-blush-600: #db2777;  /* Rani pink */
+  --color-blush-700: #be185d;
+  --color-blush-800: #9d174d;
+  --color-blush-900: #831843;
+  --color-blush-950: #500724;
   
   --color-background: var(--background);
   --color-foreground: var(--foreground);
 }
 
 :root {
-  --background: #ffffff;      
-  --foreground: #111111;
+  --background: #faf8f5;      /* Warm off-white */
+  --foreground: #2a0a18;      /* Deep wine/maroon */
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #f5f5f5;
+    --background: #1a0104;    /* Very dark burgundy */
+    --foreground: #fdf2f8;    /* Light pinkish white */
   }
 }
 
@@ -62,11 +62,11 @@ h1, h2, h3, h4, h5, h6 {
   background: transparent;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #ead9bc; /* gold-200 */
+  background-color: #fcd34d; /* gold-300 - brighter against warm bg */
   border-radius: 4px;
 }
 .dark ::-webkit-scrollbar-thumb {
-  background-color: #3c1e10; /* gold-950 */
+  background-color: #78350f; /* gold-900 */
 }
 
 /* Utilities */

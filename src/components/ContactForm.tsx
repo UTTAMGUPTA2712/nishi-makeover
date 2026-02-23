@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { MessageCircle, ArrowRight } from "lucide-react";
+import { siteData } from "@/config/siteData";
 
 export default function ContactForm() {
     const [formData, setFormData] = useState({
@@ -16,8 +17,9 @@ export default function ContactForm() {
     const handleSubmit = (e: React.FormEvent) => {
         e.preventDefault();
         // Use WhatsApp API directly as a fallback for form submission
-        const whatsappMessage = `Hi Uttam, I'm ${formData.name}. I'm inquiring about ${formData.service} on ${formData.date}. My details - Email: ${formData.email}, Phone: ${formData.phone}. Message: ${formData.message}`;
-        window.open(`https://wa.me/919876543210?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+        const whatsappMessage = `Hi ${siteData.artistName}, I'm ${formData.name}. I'm inquiring about ${formData.service} on ${formData.date}. My details - Email: ${formData.email}, Phone: ${formData.phone}. Message: ${formData.message}`;
+        const cleanPhone = siteData.contact.phone.replace(/[^0-9+]/g, '');
+        window.open(`https://wa.me/${cleanPhone.replace('+', '')}?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
     };
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -47,7 +49,7 @@ export default function ContactForm() {
                                 For urgent inquiries or specific questions, feel free to reach out directly via WhatsApp.
                             </p>
                             <a
-                                href="https://wa.me/919876543210"
+                                href={`https://wa.me/${siteData.contact.phone.replace(/[^0-9]/g, '')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center justify-center w-full bg-[#25D366] hover:bg-[#20bd5a] text-white px-6 py-4 uppercase tracking-widest text-sm transition-all duration-300 shadow-md font-medium"

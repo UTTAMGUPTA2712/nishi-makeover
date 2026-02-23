@@ -3,18 +3,10 @@
 import { useState } from "react";
 import Image from "next/image";
 import { X, ZoomIn } from "lucide-react";
+import { siteData } from "@/config/siteData";
 
-// Placeholder images
-const images = [
-    "https://images.unsplash.com/photo-1595956553066-624a949027e7?q=80&w=2000&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop", // same as hero
-    "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1964&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1516975080661-469bcfc70b80?q=80&w=2000&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1974&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1964&auto=format&fit=crop", // same as about
-    "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop",
-    "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop",
-];
+// Placeholder images replaced by siteData.portfolio.images
+const images = siteData.portfolio.images;
 
 export default function PortfolioGallery({ preview = false }: { preview?: boolean }) {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
@@ -37,8 +29,8 @@ export default function PortfolioGallery({ preview = false }: { preview?: boolea
                                 <button
                                     key={filter}
                                     className={`px-6 py-2 text-sm tracking-widest uppercase transition-colors ${filter === "All"
-                                            ? "bg-gold-600 text-white"
-                                            : "bg-transparent text-foreground/70 border border-black/10 hover:border-gold-600 hover:text-gold-700"
+                                        ? "bg-gold-600 text-white"
+                                        : "bg-transparent text-foreground/70 border border-black/10 hover:border-gold-600 hover:text-gold-700"
                                         }`}
                                 >
                                     {filter}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { siteData } from "@/config/siteData";
 import "./globals.css";
 
 const playfair = Playfair_Display({
@@ -15,8 +16,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Uttam – Premium Bridal & Fashion Makeup Artist",
-  description: "Creating timeless bridal glows & editorial looks in Delhi NCR. Book Uttam for the perfect makeup experience.",
+  title: `${siteData.artistName} – Premium Bridal & Fashion Makeup Artist`,
+  description: `Creating timeless bridal glows & editorial looks in ${siteData.contact.location}. Book ${siteData.artistName} for the perfect makeup experience.`,
 };
 
 export default function RootLayout({
