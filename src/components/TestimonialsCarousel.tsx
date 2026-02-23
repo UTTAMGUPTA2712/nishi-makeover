@@ -23,27 +23,27 @@ export default function TestimonialsCarousel() {
     };
 
     return (
-        <section className="py-24 bg-blush-50 overflow-hidden relative">
+        <section className="py-24 bg-white overflow-hidden relative">
             <div className="container mx-auto px-6 md:px-12 mb-12 flex justify-between items-end">
                 <div>
-                    <span className="text-gold-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
+                    <span className="text-purple-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
                         Love Notes
                     </span>
-                    <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground">
+                    <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900">
                         Client Words
                     </h2>
                 </div>
                 <div className="hidden md:flex gap-4">
                     <button
                         onClick={scrollLeft}
-                        className="w-12 h-12 rounded-full border border-gold-300 flex items-center justify-center text-gold-700 hover:bg-gold-600 hover:text-white hover:border-gold-600 transition-all"
+                        className="w-12 h-12 rounded-full border border-purple-300 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-all"
                         aria-label="Previous testimonial"
                     >
                         <ChevronLeft size={24} />
                     </button>
                     <button
                         onClick={scrollRight}
-                        className="w-12 h-12 rounded-full border border-gold-300 flex items-center justify-center text-gold-700 hover:bg-gold-600 hover:text-white hover:border-gold-600 transition-all"
+                        className="w-12 h-12 rounded-full border border-purple-300 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-all"
                         aria-label="Next testimonial"
                     >
                         <ChevronRight size={24} />
@@ -60,14 +60,14 @@ export default function TestimonialsCarousel() {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="min-w-[300px] md:min-w-[400px] bg-white p-8 md:p-10 snap-start shadow-sm border border-blush-100 shrink-0"
+                            className="min-w-[300px] md:min-w-[400px] bg-purple-50 p-8 md:p-10 snap-start shadow-sm border border-purple-100 shrink-0 rounded-lg"
                         >
-                            <div className="flex gap-1 mb-6 text-gold-500">
+                            <div className="flex gap-1 mb-6 text-purple-500">
                                 {[...Array(5)].map((_, i) => (
                                     <Star key={i} size={16} fill="currentColor" />
                                 ))}
                             </div>
-                            <p className="text-foreground/80 italic font-serif text-lg leading-relaxed mb-8">
+                            <p className="text-gray-800 italic font-serif text-lg leading-relaxed mb-8">
                                 "{testimonial.quote}"
                             </p>
                             <div className="flex items-center gap-4">
@@ -81,8 +81,8 @@ export default function TestimonialsCarousel() {
                                     />
                                 </div>
                                 <div>
-                                    <h4 className="font-medium text-foreground tracking-wide">{testimonial.name}</h4>
-                                    <p className="text-sm text-foreground/80 uppercase tracking-widest text-[10px] mt-1">{testimonial.role}</p>
+                                    <h4 className="font-medium text-gray-900 tracking-wide">{testimonial.name}</h4>
+                                    <p className="text-sm text-gray-600 uppercase tracking-widest text-[10px] mt-1">{testimonial.role}</p>
                                 </div>
                             </div>
                         </div>

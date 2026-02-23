@@ -18,10 +18,10 @@ export default function PortfolioGallery({ preview = false }: { preview?: boolea
             <div className="container mx-auto px-6 md:px-12">
                 {!preview && (
                     <div className="text-center mb-16">
-                        <span className="text-gold-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
+                        <span className="text-purple-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
                             Portfolio
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-serif font-medium text-foreground">
+                        <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900">
                             Featured Work
                         </h2>
                         <div className="flex justify-center gap-4 mt-8 flex-wrap">
@@ -29,8 +29,8 @@ export default function PortfolioGallery({ preview = false }: { preview?: boolea
                                 <button
                                     key={filter}
                                     className={`px-6 py-2 text-sm tracking-widest uppercase transition-colors ${filter === "All"
-                                        ? "bg-gold-600 text-white"
-                                        : "bg-transparent text-foreground/70 border border-black/10 hover:border-gold-600 hover:text-gold-700"
+                                        ? "bg-purple-600 text-white"
+                                        : "bg-transparent text-gray-700 border border-black/10 hover:border-purple-600 hover:text-purple-700"
                                         }`}
                                 >
                                     {filter}
