@@ -79,12 +79,14 @@ export default function ServicesPage() {
                                 ))}
                             </ul>
 
-                            <Link
-                                href="/contact"
+                            <a
+                                href={`https://wa.me/${siteData.contact.phone.replace(/[^0-9]/g, '')}?text=${encodeURIComponent(`Hi Nishi! I'm interested in the ${pkg.title} (${pkg.price}). Could you please share more details?`)}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className={`text-center py-4 uppercase tracking-widest text-sm transition-colors rounded-md ${idx === 0 ? "bg-foreground text-white hover:bg-primary-700" : "bg-white border border-foreground text-foreground hover:bg-foreground hover:text-white"}`}
                             >
                                 Inquire Now
-                            </Link>
+                            </a>
                         </div>
                     ))}
                 </div>
