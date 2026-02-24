@@ -3,7 +3,7 @@ export const siteData = {
     companyName: "Nishi Makeover",
     contact: {
         email: "hello@nishimakeover.com",
-        phone: "+91 8426605749",
+        phone: "+91 8423605749",
         location: "Delhi, India",
         instagram: "https://www.instagram.com/nishimakeover_up",
         facebook: "https://www.facebook.com/profile.php?id=61550263134831",
