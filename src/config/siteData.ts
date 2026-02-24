@@ -3,10 +3,10 @@ export const siteData = {
     companyName: "Nishi Gupta Makeup",
     contact: {
         email: "hello@nishimakeover.com",
-        phone: "+91 9773706266", // Placeholder, user will replace with actual number
+        phone: "+91 8426605749", // Placeholder, user will replace with actual number
         location: "Delhi, India",
         instagram: "https://www.instagram.com/nishimakeover_up",
-        facebook: "https://facebook.com/nishimakeover",
+        facebook: "https://www.facebook.com/profile.php?id=61550263134831",
         youtube: "https://youtube.com/@Nishiguptamakeover"
     },
     hero: {
@@ -22,14 +22,12 @@ export const siteData = {
         heading: "Hi, I'm Nishi Gupta",
         paragraph1: "I'm Nishi Gupta, a passionate bridal and fashion makeup artist based in Delhi with years of experience creating flawless, long-lasting looks for weddings, photoshoots, and special occasions.",
         paragraph2: "I focus on enhancing natural beauty with modern techniques and high-quality products.",
-        image: "https://images.unsplash.com/photo-1583241475880-083f84372725?q=80&w=1964&auto=format&fit=crop"
+        image: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1964&auto=format&fit=crop"
     },
     portfolio: {
         images: [
-            "https://images.unsplash.com/photo-1595956553066-624a949027e7?q=80&w=2000&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop", // same as hero
             "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1964&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1516975080661-469bcfc70b80?q=80&w=2000&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1974&auto=format&fit=crop",
             "https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1964&auto=format&fit=crop", // same as about
             "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop",
@@ -66,12 +64,12 @@ export const siteData = {
 
 export const beforeAfterPairs = [
     {
-        before: 'https://i.ytimg.com/vi/6b4tXCtj9zo/sddefault.jpg',
+        before: 'https://southindiafashion.com/wp-content/uploads/2019/08/south-indian-bridal-makeup-artists.jpg',
         after: 'https://i.ytimg.com/vi/6b4tXCtj9zo/sddefault.jpg', // Note: Use actual after if available; this is a transformation thumbnail
         description: 'Dramatic Bridal Transformation'
     },
     {
-        before: 'https://i.ytimg.com/vi/tfqPS19XPOI/sddefault.jpg',
+        before: 'https://southindiafashion.com/wp-content/uploads/2019/08/south-indian-bridal-makeup-artists.jpg',
         after: 'https://i.ytimg.com/vi/tfqPS19XPOI/sddefault.jpg',
         description: 'Real Dusky Skin Bridal Glow'
     },

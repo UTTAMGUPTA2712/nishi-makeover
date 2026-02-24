@@ -17,14 +17,14 @@ export default function AboutSection() {
                             sizes="(max-width: 768px) 100vw, 50vw"
                         />
                         {/* Decorative element */}
-                        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-purple-100 -z-10 rounded-sm" />
-                        <div className="absolute -top-6 -left-6 w-32 h-32 border border-purple-200 -z-10 rounded-sm" />
+                        <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-100 -z-10 rounded-sm" />
+                        <div className="absolute -top-6 -left-6 w-32 h-32 border border-primary-200 -z-10 rounded-sm" />
                     </div>
                 </div>
 
                 {/* Text Side */}
                 <div className="w-full md:w-1/2 flex flex-col items-start text-left">
-                    <span className="text-purple-700 font-medium tracking-[0.2em] uppercase text-sm mb-4">
+                    <span className="text-primary-700 font-medium tracking-[0.2em] uppercase text-sm mb-4">
                         {siteData.about.tagline}
                     </span>
                     <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6">
@@ -39,7 +39,7 @@ export default function AboutSection() {
 
                     <Link
                         href="/about"
-                        className="inline-flex items-center text-sm uppercase tracking-widest font-medium text-purple-700 hover:text-purple-900 transition-colors group pb-1 border-b border-purple-300 hover:border-purple-700"
+                        className="inline-flex items-center text-sm uppercase tracking-widest font-medium text-primary-700 hover:text-primary-900 transition-colors group pb-1 border-b border-primary-300 hover:border-primary-700"
                     >
                         Read my story
                     </Link>

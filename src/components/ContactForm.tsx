@@ -33,7 +33,7 @@ export default function ContactForm() {
 
                     {/* Contact Details */}
                     <div className="w-full lg:w-1/3 flex flex-col justify-center">
-                        <span className="text-purple-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
+                        <span className="text-primary-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
                             Inquire
                         </span>
                         <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900 mb-6">
@@ -43,7 +43,7 @@ export default function ContactForm() {
                             We are currently accepting bookings for the upcoming wedding season. Please fill out the form with your details, and we'll get back to you within 24-48 hours.
                         </p>
 
-                        <div className="bg-purple-50 p-8 border border-purple-100 rounded-lg">
+                        <div className="bg-primary-50 p-8 border border-primary-100 rounded-lg">
                             <h3 className="text-lg font-serif font-medium mb-4 text-gray-900">Direct Inquiry</h3>
                             <p className="text-sm text-gray-600 mb-6 leading-relaxed">
                                 For urgent inquiries or specific questions, feel free to reach out directly via WhatsApp.
@@ -73,7 +73,7 @@ export default function ContactForm() {
                                         required
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-purple-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light text-gray-900 group"
+                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light text-gray-900 group"
                                         placeholder="Priya Sharma"
                                     />
                                 </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
                                         required
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-purple-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light text-gray-900"
+                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light text-gray-900"
                                         placeholder="priya@example.com"
                                     />
                                 </div>
@@ -102,7 +102,7 @@ export default function ContactForm() {
                                         required
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-purple-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light text-gray-900"
+                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light text-gray-900"
                                         placeholder="+91 98765 43210"
                                     />
                                 </div>
@@ -114,7 +114,7 @@ export default function ContactForm() {
                                         name="date"
                                         value={formData.date}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-purple-600 py-3 outline-none transition-colors rounded-none font-light text-gray-900"
+                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none font-light text-gray-900"
                                     />
                                 </div>
                             </div>
@@ -126,7 +126,7 @@ export default function ContactForm() {
                                     name="service"
                                     value={formData.service}
                                     onChange={handleChange}
-                                    className="bg-transparent border-b border-black/20 focus:border-purple-600 py-3 outline-none transition-colors rounded-none font-light appearance-none text-gray-900"
+                                    className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none font-light appearance-none text-gray-900"
                                 >
                                     <option value="Bridal Full Package">Bridal Full Package (Airbrush/HD)</option>
                                     <option value="Pre-Wedding/Engagement">Pre-Wedding / Engagement</option>
@@ -145,14 +145,14 @@ export default function ContactForm() {
                                     rows={4}
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="bg-transparent border-b border-black/20 focus:border-purple-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light resize-none text-gray-900"
+                                    className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light resize-none text-gray-900"
                                     placeholder="I'm looking for a very natural, glowing daytime look for my destination wedding..."
                                 ></textarea>
                             </div>
 
                             <button
                                 type="submit"
-                                className="group flex items-center justify-center w-full md:w-auto bg-gray-900 hover:bg-purple-700 text-white px-10 py-5 uppercase tracking-widest text-sm transition-all duration-300 rounded-md"
+                                className="group flex items-center justify-center w-full md:w-auto bg-gray-900 hover:bg-primary-700 text-white px-10 py-5 uppercase tracking-widest text-sm transition-all duration-300 rounded-md"
                             >
                                 Send Inquiry
                                 <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform" />

@@ -43,7 +43,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className={`text-2xl font-semibold tracking-wide hover:opacity-80 transition-opacity font-serif ${scrolled || pathname !== "/" ? "text-foreground" : "text-white"}`}
+                    className={`text-2xl font-semibold tracking-wide hover:opacity-80 transition-opacity font-serif ${scrolled || pathname !== "/" ? "text-gray-900" : "text-white"}`}
                 >
                     {siteData.companyName}
                 </Link>
@@ -55,8 +55,8 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             className={`text-sm uppercase tracking-widest transition-colors ${pathname === link.href
-                                ? "text-purple-400 font-medium"
-                                : scrolled || pathname !== "/" ? "text-gray-800 hover:text-purple-600" : "text-white/80 hover:text-white"
+                                ? (scrolled || pathname !== "/" ? "text-primary-700 font-medium" : "text-primary-300 font-medium")
+                                : scrolled || pathname !== "/" ? "text-gray-800 hover:text-primary-600" : "text-white/80 hover:text-white"
                                 }`}
                         >
                             {link.name}
@@ -66,7 +66,7 @@ export default function Navbar() {
                         href={siteData.contact.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`transition-colors ${scrolled || pathname !== "/" ? "text-gray-800 hover:text-purple-600" : "text-white/80 hover:text-white"}`}
+                        className={`transition-colors ${scrolled || pathname !== "/" ? "text-gray-800 hover:text-primary-600" : "text-white/80 hover:text-white"}`}
                     >
                         <Instagram size={20} />
                         <span className="sr-only">Instagram</span>
@@ -75,7 +75,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className={`md:hidden transition-colors p-2 ${scrolled || pathname !== "/" ? "text-gray-900 hover:text-purple-600" : "text-white hover:text-purple-300"}`}
+                    className={`md:hidden transition-colors p-2 ${scrolled || pathname !== "/" ? "text-gray-900 hover:text-primary-600" : "text-white hover:text-primary-300"}`}
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
                 >
@@ -85,14 +85,14 @@ export default function Navbar() {
 
             {/* Mobile Navigation */}
             {isOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-purple-100 shadow-lg py-4 flex flex-col space-y-4 px-6 z-50">
+                <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-primary-100 shadow-lg py-4 flex flex-col space-y-4 px-6 z-50">
                     {navLinks.map((link) => (
                         <Link
                             key={link.name}
                             href={link.href}
-                            className={`text-base uppercase tracking-widest py-2 border-b border-purple-50 transition-colors ${pathname === link.href
-                                ? "text-purple-700 font-medium"
-                                : "text-gray-800 hover:text-purple-600"
+                            className={`text-base uppercase tracking-widest py-2 border-b border-primary-50 transition-colors ${pathname === link.href
+                                ? "text-primary-700 font-medium"
+                                : "text-gray-800 hover:text-primary-600"
                                 }`}
                         >
                             {link.name}
@@ -103,7 +103,7 @@ export default function Navbar() {
                             href={siteData.contact.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center space-x-2 text-gray-800 hover:text-purple-600 transition-colors"
+                            className="inline-flex items-center space-x-2 text-gray-800 hover:text-primary-600 transition-colors"
                         >
                             <Instagram size={20} />
                             <span className="text-sm uppercase tracking-widest">Follow on Instagram</span>

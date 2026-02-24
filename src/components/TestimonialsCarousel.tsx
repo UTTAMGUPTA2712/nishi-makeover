@@ -26,7 +26,7 @@ export default function TestimonialsCarousel() {
         <section className="py-24 bg-white overflow-hidden relative">
             <div className="container mx-auto px-6 md:px-12 mb-12 flex justify-between items-end">
                 <div>
-                    <span className="text-purple-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
+                    <span className="text-primary-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
                         Love Notes
                     </span>
                     <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900">
@@ -36,14 +36,14 @@ export default function TestimonialsCarousel() {
                 <div className="hidden md:flex gap-4">
                     <button
                         onClick={scrollLeft}
-                        className="w-12 h-12 rounded-full border border-purple-300 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-all"
+                        className="w-12 h-12 rounded-full border border-primary-300 flex items-center justify-center text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all"
                         aria-label="Previous testimonial"
                     >
                         <ChevronLeft size={24} />
                     </button>
                     <button
                         onClick={scrollRight}
-                        className="w-12 h-12 rounded-full border border-purple-300 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white hover:border-purple-600 transition-all"
+                        className="w-12 h-12 rounded-full border border-primary-300 flex items-center justify-center text-primary-700 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-all"
                         aria-label="Next testimonial"
                     >
                         <ChevronRight size={24} />
@@ -60,9 +60,9 @@ export default function TestimonialsCarousel() {
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="min-w-[300px] md:min-w-[400px] bg-purple-50 p-8 md:p-10 snap-start shadow-sm border border-purple-100 shrink-0 rounded-lg"
+                            className="min-w-[300px] md:min-w-[400px] bg-primary-50 p-8 md:p-10 snap-start shadow-sm border border-primary-100 shrink-0 rounded-lg"
                         >
-                            <div className="flex gap-1 mb-6 text-purple-500">
+                            <div className="flex gap-1 mb-6 text-primary-500">
                                 {[...Array(5)].map((_, i) => (
                                     <Star key={i} size={16} fill="currentColor" />
                                 ))}

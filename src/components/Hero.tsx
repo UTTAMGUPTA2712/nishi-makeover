@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
-        <section className="relative h-[85vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-purple-900 to-black">
+        <section className="relative h-[85vh] min-h-[600px] w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary-950 to-black">
             {/* Background Image */}
             <div className="absolute inset-0 z-0 opacity-40 mix-blend-overlay">
                 <Image
@@ -20,7 +20,7 @@ export default function Hero() {
                     sizes="100vw"
                 />
                 {/* Elegant overlay to make text readable */}
-                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-purple-950/60 to-black/30 w-full md:w-[70%] z-10" />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-primary-950/70 to-black/40 w-full md:w-[70%] z-10" />
             </div>
 
             {/* Content */}
@@ -34,7 +34,7 @@ export default function Hero() {
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.2, duration: 0.5 }}
-                    className="text-pink-300 font-medium tracking-[0.2em] uppercase text-sm mb-4 inline-block"
+                    className="text-primary-300 font-medium tracking-[0.2em] uppercase text-sm mb-4 inline-block"
                 >
                     {siteData.hero.tagline}
                 </motion.span>
@@ -45,7 +45,7 @@ export default function Hero() {
                     className="text-4xl md:text-6xl lg:text-7xl font-serif font-medium leading-tight mb-6 max-w-3xl drop-shadow-xl text-white"
                 >
                     {siteData.hero.headingLine1} <br className="hidden md:block" />
-                    <span className="text-pink-400 indent-2 italic">{siteData.hero.headingLine2}</span> {siteData.hero.headingLine3}
+                    <span className="text-primary-400 indent-2 italic">{siteData.hero.headingLine2}</span> {siteData.hero.headingLine3}
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0 }}

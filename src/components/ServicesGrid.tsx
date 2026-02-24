@@ -36,7 +36,7 @@ export default function ServicesGrid() {
         <section className="py-24 bg-white">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="text-center mb-16">
-                    <span className="text-purple-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
+                    <span className="text-primary-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
                         Offerings
                     </span>
                     <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900">
@@ -54,9 +54,9 @@ export default function ServicesGrid() {
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1, duration: 0.5 }}
                                 key={index}
-                                className="group flex flex-col p-8 bg-zinc-50 hover:bg-purple-50 transition-colors duration-300 border border-transparent hover:border-purple-200 rounded-lg"
+                                className="group flex flex-col p-8 bg-zinc-50 hover:bg-primary-50 transition-colors duration-300 border border-transparent hover:border-primary-200 rounded-lg"
                             >
-                                <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 text-purple-600">
+                                <div className="w-12 h-12 bg-white flex items-center justify-center rounded-full mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 text-primary-600">
                                     <Icon size={24} strokeWidth={1.5} />
                                 </div>
                                 <h3 className="text-xl font-serif font-medium mb-3 text-gray-900">
@@ -65,7 +65,7 @@ export default function ServicesGrid() {
                                 <p className="text-gray-700 text-sm leading-relaxed mb-6 flex-grow font-light">
                                     {service.description}
                                 </p>
-                                <p className="text-sm font-medium tracking-wide text-purple-700">
+                                <p className="text-sm font-medium tracking-wide text-primary-700">
                                     {service.price}
                                 </p>
                             </motion.div>

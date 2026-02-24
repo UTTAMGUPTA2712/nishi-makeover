@@ -6,10 +6,10 @@ import { beforeAfterPairs } from "@/config/siteData";
 
 export default function BeforeAfterGallery() {
     return (
-        <section className="py-24 bg-purple-50">
+        <section className="py-24 bg-primary-50">
             <div className="container mx-auto px-6 md:px-12">
                 <div className="text-center mb-16">
-                    <span className="text-purple-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
+                    <span className="text-primary-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
                         Transformations
                     </span>
                     <h2 className="text-4xl md:text-5xl font-serif font-medium text-gray-900">
@@ -23,7 +23,7 @@ export default function BeforeAfterGallery() {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
                     {beforeAfterPairs.map((pair, index) => (
                         <div key={index} className="flex flex-col">
-                            <div className="relative rounded-lg overflow-hidden shadow-sm aspect-[4/5] md:aspect-square bg-white border border-purple-100">
+                            <div className="relative rounded-lg overflow-hidden shadow-sm aspect-[4/5] md:aspect-square bg-white border border-primary-100">
                                 <ReactCompareSlider
                                     itemOne={<ReactCompareSliderImage src={pair.before} alt="Before Makeup" style={{ objectFit: "cover" }} />}
                                     itemTwo={<ReactCompareSliderImage src={pair.after} alt="After Makeup" style={{ objectFit: "cover" }} />}
