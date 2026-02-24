@@ -43,7 +43,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className={`text-2xl font-semibold tracking-wide hover:opacity-80 transition-opacity font-serif ${scrolled || pathname !== "/" ? "text-gray-900" : "text-white"}`}
+                    className="text-2xl font-semibold tracking-wide hover:opacity-80 transition-opacity font-serif text-gray-900"
                 >
                     {siteData.companyName}
                 </Link>
@@ -55,8 +55,8 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             className={`text-sm uppercase tracking-widest transition-colors ${pathname === link.href
-                                ? (scrolled || pathname !== "/" ? "text-primary-700 font-medium" : "text-primary-300 font-medium")
-                                : scrolled || pathname !== "/" ? "text-gray-800 hover:text-primary-600" : "text-white/80 hover:text-white"
+                                ? "text-primary-700 font-medium"
+                                : "text-gray-800 hover:text-primary-600"
                                 }`}
                         >
                             {link.name}
@@ -66,7 +66,7 @@ export default function Navbar() {
                         href={siteData.contact.instagram}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`transition-colors ${scrolled || pathname !== "/" ? "text-gray-800 hover:text-primary-600" : "text-white/80 hover:text-white"}`}
+                        className="transition-colors text-gray-800 hover:text-primary-600"
                     >
                         <Instagram size={20} />
                         <span className="sr-only">Instagram</span>
@@ -75,7 +75,7 @@ export default function Navbar() {
 
                 {/* Mobile Menu Toggle */}
                 <button
-                    className={`md:hidden transition-colors p-2 ${scrolled || pathname !== "/" ? "text-gray-900 hover:text-primary-600" : "text-white hover:text-primary-300"}`}
+                    className="md:hidden transition-colors p-2 text-gray-900 hover:text-primary-600"
                     onClick={() => setIsOpen(!isOpen)}
                     aria-label="Toggle menu"
                 >

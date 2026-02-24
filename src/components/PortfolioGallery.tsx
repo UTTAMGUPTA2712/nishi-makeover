@@ -30,7 +30,7 @@ export default function PortfolioGallery({ preview = false }: { preview?: boolea
                                     key={filter}
                                     className={`px-6 py-2 text-sm tracking-widest uppercase transition-colors ${filter === "All"
                                         ? "bg-primary-600 text-white"
-                                        : "bg-transparent text-gray-700 border border-black/10 hover:border-primary-600 hover:text-primary-700"
+                                        : "bg-transparent text-gray-800 border border-black/20 hover:border-primary-600 hover:text-primary-700"
                                         }`}
                                 >
                                     {filter}

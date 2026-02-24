@@ -54,13 +54,13 @@ export default function TestimonialsCarousel() {
             <div className="container mx-auto px-6 md:px-12 relative">
                 <div
                     ref={scrollContainerRef}
-                    className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8"
+                    className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4"
                     style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
                 >
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
-                            className="min-w-[300px] md:min-w-[400px] bg-primary-50 p-8 md:p-10 snap-start shadow-sm border border-primary-100 shrink-0 rounded-lg"
+                            className="min-w-[300px] md:min-w-[400px] bg-primary-50 p-8 md:p-10 snap-start shadow-sm border border-primary-100 shrink-0 rounded-2xl"
                         >
                             <div className="flex gap-1 mb-6 text-primary-500">
                                 {[...Array(5)].map((_, i) => (
@@ -71,18 +71,18 @@ export default function TestimonialsCarousel() {
                                 "{testimonial.quote}"
                             </p>
                             <div className="flex items-center gap-4">
-                                <div className="relative w-12 h-12 rounded-full overflow-hidden">
+                                <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary-100">
                                     <Image
                                         src={testimonial.image}
                                         alt={testimonial.name}
                                         fill
                                         className="object-cover"
-                                        sizes="48px"
+                                        sizes="56px"
                                     />
                                 </div>
                                 <div>
                                     <h4 className="font-medium text-gray-900 tracking-wide">{testimonial.name}</h4>
-                                    <p className="text-sm text-gray-600 uppercase tracking-widest text-[10px] mt-1">{testimonial.role}</p>
+                                    <p className="text-xs text-primary-600 uppercase tracking-widest mt-1">{testimonial.role}</p>
                                 </div>
                             </div>
                         </div>
@@ -90,7 +90,6 @@ export default function TestimonialsCarousel() {
                 </div>
             </div>
 
-            {/* CSS to hide scrollbar in WebKit */}
             <style dangerouslySetInnerHTML={{
                 __html: `
         .hide-scrollbar::-webkit-scrollbar {

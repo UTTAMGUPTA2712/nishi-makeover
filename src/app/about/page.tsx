@@ -39,7 +39,7 @@ export default function AboutPage() {
 
                 {/* Right Side: Copy */}
                 <div className="w-full lg:w-7/12 pt-8 lg:pl-8">
-                    <span className="text-gold-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
+                    <span className="text-primary-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
                         The Artist
                     </span>
                     <h1 className="text-5xl md:text-6xl font-serif font-medium text-foreground mb-8">
@@ -60,14 +60,14 @@ export default function AboutPage() {
 
                     <div className="grid grid-cols-2 gap-8 mb-12 border-y border-black/10 py-8">
                         <div>
-                            <div className="flex items-center text-gold-600 mb-2">
+                            <div className="flex items-center text-primary-600 mb-2">
                                 <Award size={20} className="mr-2" />
                                 <span className="font-serif text-xl">10+ Years</span>
                             </div>
                             <p className="text-sm font-light text-foreground/60 uppercase tracking-widest">Experience</p>
                         </div>
                         <div>
-                            <div className="flex items-center text-gold-600 mb-2">
+                            <div className="flex items-center text-primary-600 mb-2">
                                 <Award size={20} className="mr-2" />
                                 <span className="font-serif text-xl">500+ Brides</span>
                             </div>
@@ -78,7 +78,7 @@ export default function AboutPage() {
                     <div className="flex gap-4">
                         <Link
                             href="/portfolio"
-                            className="bg-foreground hover:bg-gold-700 text-white px-8 py-4 uppercase tracking-widest text-sm transition-all duration-300"
+                            className="bg-foreground hover:bg-primary-700 text-white px-8 py-4 uppercase tracking-widest text-sm transition-all duration-300 rounded-md"
                         >
                             View My Work
                         </Link>
@@ -86,7 +86,7 @@ export default function AboutPage() {
                             href={siteData.contact.instagram}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center justify-center border border-black/20 hover:border-gold-600 text-foreground hover:text-gold-700 px-6 py-4 uppercase tracking-widest text-sm transition-all duration-300"
+                            className="flex items-center justify-center border border-black/20 hover:border-primary-600 text-foreground hover:text-primary-700 px-6 py-4 uppercase tracking-widest text-sm transition-all duration-300 rounded-md"
                         >
                             <Instagram size={18} className="mr-2" />
                             Follow

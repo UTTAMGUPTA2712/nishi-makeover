@@ -1,6 +1,6 @@
 export const siteData = {
     artistName: "Nishi Gupta",
-    companyName: "Nishi Gupta Makeup",
+    companyName: "Nishi Makeover",
     contact: {
         email: "hello@nishimakeover.com",
         phone: "+91 8426605749", // Placeholder, user will replace with actual number

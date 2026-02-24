@@ -73,7 +73,7 @@ export default function ContactForm() {
                                         required
                                         value={formData.name}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light text-gray-900 group"
+                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-500 font-light text-gray-900 group"
                                         placeholder="Priya Sharma"
                                     />
                                 </div>
@@ -86,7 +86,7 @@ export default function ContactForm() {
                                         required
                                         value={formData.email}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light text-gray-900"
+                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-500 font-light text-gray-900"
                                         placeholder="priya@example.com"
                                     />
                                 </div>
@@ -102,7 +102,7 @@ export default function ContactForm() {
                                         required
                                         value={formData.phone}
                                         onChange={handleChange}
-                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light text-gray-900"
+                                        className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-500 font-light text-gray-900"
                                         placeholder="+91 98765 43210"
                                     />
                                 </div>
@@ -145,7 +145,7 @@ export default function ContactForm() {
                                     rows={4}
                                     value={formData.message}
                                     onChange={handleChange}
-                                    className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-400 font-light resize-none text-gray-900"
+                                    className="bg-transparent border-b border-black/20 focus:border-primary-600 py-3 outline-none transition-colors rounded-none placeholder:text-gray-500 font-light resize-none text-gray-900"
                                     placeholder="I'm looking for a very natural, glowing daytime look for my destination wedding..."
                                 ></textarea>
                             </div>
