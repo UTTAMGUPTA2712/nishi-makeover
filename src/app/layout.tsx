@@ -34,7 +34,7 @@ export default function RootLayout({
         className={`${playfair.variable} ${inter.variable} font-sans antialiased bg-background text-foreground flex flex-col min-h-screen`}
       >
         <Navbar />
-        <main className="flex-grow pt-20">
+        <main className="flex-grow pt-22">
           {children}
         </main>
         <Footer />

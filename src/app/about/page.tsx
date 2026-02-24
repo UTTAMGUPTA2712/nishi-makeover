@@ -28,7 +28,7 @@ export default function AboutPage() {
                     </div>
                     <div className="absolute -bottom-12 -right-8 w-1/2 aspect-square hidden md:block">
                         <Image
-                            src="https://images.unsplash.com/photo-1516975080661-469bcfc70b80?q=80&w=1000&auto=format&fit=crop"
+                            src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1964&auto=format&fit=crop"
                             alt="Makeup Brushes"
                             fill
                             className="object-cover rounded-sm border-8 border-white shadow-lg"
