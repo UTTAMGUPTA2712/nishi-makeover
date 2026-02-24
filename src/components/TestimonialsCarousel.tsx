@@ -23,7 +23,7 @@ export default function TestimonialsCarousel() {
     };
 
     return (
-        <section className="py-24 bg-white overflow-hidden relative">
+        <section className="py-24 bg-white" id="testimonials-section">
             <div className="container mx-auto px-6 md:px-12 mb-12 flex justify-between items-end">
                 <div>
                     <span className="text-primary-600 font-medium tracking-[0.2em] uppercase text-sm mb-4 block">
@@ -51,42 +51,44 @@ export default function TestimonialsCarousel() {
                 </div>
             </div>
 
-            <div className="container mx-auto px-6 md:px-12 relative">
-                <div
-                    ref={scrollContainerRef}
-                    className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4"
-                    style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-                >
-                    {testimonials.map((testimonial, index) => (
-                        <div
-                            key={index}
-                            className="min-w-[300px] md:min-w-[400px] bg-primary-50 p-8 md:p-10 snap-start shadow-sm border border-primary-100 shrink-0 rounded-2xl"
-                        >
-                            <div className="flex gap-1 mb-6 text-primary-500">
-                                {[...Array(5)].map((_, i) => (
-                                    <Star key={i} size={16} fill="currentColor" />
-                                ))}
-                            </div>
-                            <p className="text-gray-800 italic font-serif text-lg leading-relaxed mb-8">
-                                "{testimonial.quote}"
-                            </p>
-                            <div className="flex items-center gap-4">
-                                <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary-100">
-                                    <Image
-                                        src={testimonial.image}
-                                        alt={testimonial.name}
-                                        fill
-                                        className="object-cover"
-                                        sizes="56px"
-                                    />
+            <div className="w-full overflow-hidden">
+                <div className="container mx-auto px-6 md:px-12">
+                    <div
+                        ref={scrollContainerRef}
+                        className="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4"
+                        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+                    >
+                        {testimonials.map((testimonial, index) => (
+                            <div
+                                key={index}
+                                className="w-[85vw] sm:w-[400px] shrink-0 bg-primary-50 p-8 md:p-10 snap-start shadow-sm border border-primary-100 rounded-2xl"
+                            >
+                                <div className="flex gap-1 mb-6 text-primary-500">
+                                    {[...Array(5)].map((_, i) => (
+                                        <Star key={i} size={16} fill="currentColor" />
+                                    ))}
                                 </div>
-                                <div>
-                                    <h4 className="font-medium text-gray-900 tracking-wide">{testimonial.name}</h4>
-                                    <p className="text-xs text-primary-600 uppercase tracking-widest mt-1">{testimonial.role}</p>
+                                <p className="text-gray-800 italic font-serif text-lg leading-relaxed mb-8">
+                                    "{testimonial.quote}"
+                                </p>
+                                <div className="flex items-center gap-4">
+                                    <div className="relative w-14 h-14 rounded-full overflow-hidden border-2 border-primary-100">
+                                        <Image
+                                            src={testimonial.image}
+                                            alt={testimonial.name}
+                                            fill
+                                            className="object-cover"
+                                            sizes="56px"
+                                        />
+                                    </div>
+                                    <div>
+                                        <h4 className="font-medium text-gray-900 tracking-wide">{testimonial.name}</h4>
+                                        <p className="text-xs text-primary-600 uppercase tracking-widest mt-1">{testimonial.role}</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
 

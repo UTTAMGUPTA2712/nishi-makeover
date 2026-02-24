@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Instagram, Mail, MapPin, Phone } from "lucide-react";
 import { siteData } from "@/config/siteData";
 
@@ -9,8 +10,16 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     {/* Brand */}
                     <div className="flex flex-col space-y-4">
-                        <h3 className="text-2xl font-serif text-white">{siteData.companyName}</h3>
-                        <p className="text-primary-200 leading-relaxed max-w-sm">
+                        <Link href="/" className="inline-block hover:opacity-90 transition-opacity max-w-fit">
+                            <Image
+                                src="/logo.jpg"
+                                alt={siteData.companyName}
+                                width={80}
+                                height={80}
+                                className="h-16 w-16 object-cover object-center rounded-full shadow-sm"
+                            />
+                        </Link>
+                        <p className="text-primary-200 leading-relaxed max-w-sm mt-4">
                             Delhi's Expert Bridal & Fashion Makeup Artist. Creating timeless, radiant looks for your special day.
                         </p>
                     </div>

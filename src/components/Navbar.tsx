@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Instagram } from "lucide-react";
 import { siteData } from "@/config/siteData";
@@ -43,9 +44,16 @@ export default function Navbar() {
                 {/* Logo */}
                 <Link
                     href="/"
-                    className="text-2xl font-semibold tracking-wide hover:opacity-80 transition-opacity font-serif text-gray-900"
+                    className="flex items-center hover:opacity-80 transition-opacity"
                 >
-                    {siteData.companyName}
+                    <Image
+                        src="/logo.jpg"
+                        alt={siteData.companyName}
+                        width={60}
+                        height={60}
+                        className="h-14 w-14 object-cover object-center rounded-full shadow-sm"
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Navigation */}

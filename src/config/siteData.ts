@@ -3,7 +3,7 @@ export const siteData = {
     companyName: "Nishi Makeover",
     contact: {
         email: "hello@nishimakeover.com",
-        phone: "+91 8426605749", // Placeholder, user will replace with actual number
+        phone: "+91 8426605749",
         location: "Delhi, India",
         instagram: "https://www.instagram.com/nishimakeover_up",
         facebook: "https://www.facebook.com/profile.php?id=61550263134831",
@@ -12,7 +12,7 @@ export const siteData = {
     hero: {
         tagline: "Delhi's Expert Bridal & Fashion Makeup Artist – Transforming Brides with Timeless Elegance",
         headingLine1: "Timeless Bridal Glows &",
-        headingLine2: "Editorial", // The italicised word
+        headingLine2: "Editorial",
         headingLine3: "Looks",
         description: "Delhi's Expert Bridal & Fashion Makeup Artist – Transforming Brides with Timeless Elegance",
         image: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop"
@@ -26,12 +26,12 @@ export const siteData = {
     },
     portfolio: {
         images: [
-            "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop", // same as hero
-            "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1964&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1974&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1964&auto=format&fit=crop", // same as about
-            "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop",
-            "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop"
+            { src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=2071&auto=format&fit=crop", category: "Bridal" }, // same as hero
+            { src: "https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=1964&auto=format&fit=crop", category: "Editorial" },
+            { src: "https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=1974&auto=format&fit=crop", category: "Glamour" },
+            { src: "https://images.unsplash.com/photo-1596704017254-9b121068fb31?q=80&w=1964&auto=format&fit=crop", category: "Bridal" }, // same as about
+            { src: "https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?q=80&w=1964&auto=format&fit=crop", category: "Editorial" },
+            { src: "https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=1974&auto=format&fit=crop", category: "Glamour" }
         ]
     },
     testimonials: [

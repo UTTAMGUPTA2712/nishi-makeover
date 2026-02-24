@@ -18,6 +18,9 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: `${siteData.artistName} – Premium Bridal & Fashion Makeup Artist`,
   description: `Creating timeless bridal glows & editorial looks in ${siteData.contact.location}. Book ${siteData.artistName} for the perfect makeup experience.`,
+  icons: {
+    icon: "/logo.jpg",
+  }
 };
 
 export default function RootLayout({

@@ -10,8 +10,13 @@ const images = siteData.portfolio.images;
 
 export default function PortfolioGallery({ preview = false }: { preview?: boolean }) {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [activeFilter, setActiveFilter] = useState("All");
 
-    const displayImages = preview ? images.slice(0, 6) : images;
+    const filteredImages = activeFilter === "All"
+        ? images
+        : images.filter((img: any) => img.category === activeFilter);
+
+    const displayImages = preview ? filteredImages.slice(0, 6) : filteredImages;
 
     return (
         <section className="py-24 bg-white" id="portfolio-section">
@@ -28,7 +33,8 @@ export default function PortfolioGallery({ preview = false }: { preview?: boolea
                             {["All", "Bridal", "Editorial", "Glamour"].map((filter) => (
                                 <button
                                     key={filter}
-                                    className={`px-6 py-2 text-sm tracking-widest uppercase transition-colors ${filter === "All"
+                                    onClick={() => setActiveFilter(filter)}
+                                    className={`px-6 py-2 text-sm tracking-widest uppercase transition-colors ${filter === activeFilter
                                         ? "bg-primary-600 text-white"
                                         : "bg-transparent text-gray-800 border border-black/20 hover:border-primary-600 hover:text-primary-700"
                                         }`}
@@ -41,14 +47,14 @@ export default function PortfolioGallery({ preview = false }: { preview?: boolea
                 )}
 
                 <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                    {displayImages.map((src, index) => (
+                    {displayImages.map((img: any, index: number) => (
                         <div
                             key={index}
                             className="relative group cursor-pointer overflow-hidden rounded-sm break-inside-avoid"
-                            onClick={() => setSelectedImage(src)}
+                            onClick={() => setSelectedImage(img.src)}
                         >
                             <Image
-                                src={src}
+                                src={img.src}
                                 alt={`Portfolio image ${index + 1}`}
                                 width={800}
                                 height={1200}
